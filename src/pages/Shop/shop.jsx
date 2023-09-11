@@ -1,19 +1,25 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { PRODUCTS } from '../../products'
 import Product from './product'
+import Dropdown from './Dropdown'
 import "./shop.css" 
+import { ShopContext } from '../../context/shop-context'
 const shop = () => {
-  return (
+  const{testState,productsList}=useContext(ShopContext);
+  return (<>
     <div className='shop'>
-        <div> <h1>Pranay's Shop </h1></div>
+      <div className='headers'>
+        <div> <h1>Pranay's Shop {testState}</h1></div>
+         <Dropdown/>
+      </div>
         <div className="products">
-
-
-        {PRODUCTS.map((product) =>{
+        {productsList.map((product) =>{
             return <Product data={product} key={product.id} />
         })}
-        </div>
+      </div>
+
     </div>
+    </>
   )
 }
 

@@ -19,3 +19,26 @@
     margin-left: 20px;
     font-size: 25px;
   }
+
+/* Search Input */
+/* styles.css */
+.search-input {
+  display: flex;
+  align-items: center;
+}
+
+.search-input input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.search-input button {
+  background-color: transparent !important;
+  color:whitesmoke;
+  border: none;
+  border-radius: 4px;
+  padding: 2px;
+  cursor: pointer;
+}
